@@ -4,7 +4,7 @@ This project analyzes tokenization behavior of a multilingual BERT model in six 
 
 ## Goal
 
-To examine how subword tokenization behaves across sentences in different languages.
+To examine how subword tokenization behaves across sentences in six different languages.
 
 ## Method
 
