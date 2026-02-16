@@ -29,5 +29,6 @@ From the project directory:
 ```bash
 source venv/bin/activate
 python text_tokenizer.py
+```
 
 The results.csv file is merely an example of a previously run model and it does not reflect the results for the current code.
