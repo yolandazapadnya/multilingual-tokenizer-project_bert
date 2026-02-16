@@ -8,5 +8,3 @@ __pycache__/
 # macOS
 .DS_Store
 
-# Outputs
-results.csv
