@@ -47,6 +47,11 @@ print("Average tokens per sentence:", df["num_tokens"].mean())
 print("Max tokens:", df["num_tokens"].max())
 print("Min tokens:", df["num_tokens"].min())
 
+print("\nSummary statistics:")
+print(f"Average tokens per sentence: {df['num_tokens'].mean():.2f}")
+print(f"Maximum tokens in a sentence: {df['num_tokens'].max()}")
+print(f"Minimum tokens in a sentence: {df['num_tokens'].min()}")
+
 #5. Save results to csv
 df.to_csv("results.csv", index=False)
 

@@ -14,6 +14,7 @@ To examine how subword tokenization behaves across sentences in six different la
 4. Next, sentence numbering was removed
 5. The model `bert-base-multilingual-cased` was used
 6. Number of tokens per sentence was calculated, together with the average tokens per sentence, longest, and shortest sentence
+7. A summary statistics was presented in the form of average tokens, maximum tokens, and minimum tokens per sentence
 
 ## Output
 
