@@ -1,26 +1,31 @@
-# Multilingual Tokenizer Analysis
+# Multilingual Tokenizer & Sentence Embedding Analysis
 
-This project analyzes tokenization behavior of a multilingual BERT model in six Indo-European languages: European Portuguese, Ukrainian, Russian, English, Spanish, and German.
+This project performs a basic multilingual text analysis combining token-based statistics with neural sentence embeddings.
 
-## Goal
+It is designed as a small, reproducible NLP pipeline suitable for linguistic analysis and as a portfolio project for NLP/AI roles. It includes six Indo-European languages: European Portuguese, Ukrainian, Russian, English, Spanish, and German: 50 sentences in total.
 
-To examine how subword tokenization behaves across sentences in six different languages.
+## What the script does
 
-## Method
+The script `text_tokenizer.py`:
 
-1. Since this is an example project, the sentences were generated with the help of Claude Sonnet 4.5
-2. Then, the sentences were loaded into a numbered text file (.txt, created in VS Code) and placed inside the folder
-3. After that, the data file was loaded
-4. Next, sentence numbering was removed
-5. The model `bert-base-multilingual-cased` was used
-6. Number of tokens per sentence was calculated, together with the average tokens per sentence, longest, and shortest sentence
-7. A summary statistics was presented in the form of average tokens, maximum tokens, and minimum tokens per sentence
+1. Loads a text file (`data.txt`) containing numbered sentences
+2. Cleans and extracts the sentence text
+3. Computes token-level statistics using a multilingual BERT tokenizer
+4. Computes sentence embeddings using a multilingual SentenceTransformer model
+5. Stores summary results in a CSV file
 
-## Output
+## Models used
 
-The script generates `results.csv` containing sentence-level token counts.
+- **Tokenizer**: `bert-base-multilingual-cased` (for token counts only)
+- **Sentence embeddings**: `paraphrase-multilingual-MiniLM-L12-v2`
+  (SentenceTransformers, PyTorch backend)
+
+This setup avoids unstable low-level forward passes on macOS while retaining neural representations.
 
 ## How to run
 
+From the project directory:
+
 ```bash
+source venv/bin/activate
 python text_tokenizer.py
